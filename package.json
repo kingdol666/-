@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
     "element-plus": "^2.3.14",
     "node-sass": "^9.0.0",
     "pinia": "^2.1.6",

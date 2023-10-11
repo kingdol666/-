@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <div class="left-content"><img src="../assets/vue.svg" alt="logo" /></div>
+    <div class="left-content"><img src="../assets/pisa.svg" alt="logo" /></div>
     <div class="right-content">我的小小项目案例</div>
   </div>
   <el-menu

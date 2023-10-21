@@ -36,7 +36,13 @@ const routes = [
       //     component: () => import("@/manage/UserManage/UserManage.vue"),
       //   },
     ],
+    
   },
+  {
+    path: "/about",
+    name: "About",
+    component: () => import(/* webpackChunkName: "about" */ "../components/Carousel.vue"),
+  }
 ];
 // createRouter创建路由
 const router = createRouter({

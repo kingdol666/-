@@ -24,9 +24,17 @@ export default defineConfig({
       "/foo": "http://192.168.92.1:8081",
       // 选项写法
       "/api": {
-        target: "http://192.168.xxx.xxx:xxxx", //代理接口
+        target: "http://localhost:5000", //代理接口
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
+  // vite2.x
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
       },
     },
   },

@@ -17,10 +17,12 @@
       />
       <button @click="addMessage">发送</button>
     </div>
+    <button @click="test2">清空</button>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -32,12 +34,32 @@ export default {
     };
   },
   methods: {
-    getData(myMessage) {
-      console.log("getData" + myMessage);
+    test2() {},
+    async getBackData() {
+      var formData = new FormData();
+      formData.append("text", this.messageText);
+      var textValue = formData.get("text");
+      console.log(textValue);
+      try {
+        // 发送POST请求并携带表单数据
+        const response = await axios.post("/api/get_shici", formData);
+
+        // 处理响应结果
+        const newText = response.data["text"];
+        console.log(newText);
+        this.messages.push({
+          user: "对穿肠",
+          text: newText,
+          self: false,
+        });
+      } catch (error) {
+        console.error(error);
+      }
     },
     addMessage() {
-      this.getData(this.messageText);
       if (!this.messageText) return;
+      this.getBackData();
+
       this.messages.push({
         user: "",
         text: this.messageText,
@@ -88,6 +110,7 @@ export default {
 .message-text {
   font-size: 14px;
 }
+
 .input-box {
   display: flex;
   flex-direction: row;

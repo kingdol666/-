@@ -14,6 +14,7 @@ import "@/assets/test.scss/";
 import STable from "@surely-vue/table";
 import "@surely-vue/table/dist/index.less";
 import JwChat from "jwchat";
+import * as echarts from "echarts";
 const app = createApp(App);
 
 app

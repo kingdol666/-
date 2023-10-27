@@ -5,7 +5,7 @@
         <!-- 布局内容 --><AntdDemo />
       </el-col>
       <el-col :span="12" :xs="24" :sm="12" :md="8" :lg="6" class="eg-purple">
-        <!-- 布局内容 --><SuleVue />
+        <!-- 布局内容 --><ChatDemo3 />
       </el-col>
       <el-col :span="12" :xs="24" :sm="12" :md="8" :lg="6" class="eg-purple-light">
         <!-- 布局内容 --><ChatDemo />
@@ -51,6 +51,7 @@ import EChat2Demo from "./echart/EChart2.vue";
 import EChart from "./echart/EChart.vue";
 import AntdDemo from "./antdDemo/antdDemo.vue";
 import ChatDemo2 from "./chat/ChatDemo2.vue";
+import ChatDemo3 from "./chat/ChatDemo3.vue";
 import ChatDemo from "./chat/ChatDemo.vue";
 import SuleVue from "./antdDemo/sureVue.vue";
 import AntdDemoForm from "./antdDemo/antdDemoForm.vue";

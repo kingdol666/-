@@ -9,9 +9,9 @@
     :collapse-transition="false"
     @open="handleOpen"
     @close="handleClose"
-    background-color="#ebf1f5"
-    text-color="#606266"
-    active-text-color="#2F74FF"
+    style="background-color: #9a6730"
+    text-color="#008000"
+    active-text-color="#2e6b85"
     class="menu"
     router
   >
@@ -70,7 +70,7 @@ const handleClose = (key: string, keyPath: string[]) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f5f5f5;
+  background-color: #342275;
   padding: 10px;
 }
 
@@ -79,18 +79,20 @@ const handleClose = (key: string, keyPath: string[]) => {
   height: auto;
 }
 
-.logo .left-content {
-  display: flex;
-  align-items: center;
-}
-
 .logo .right-content {
   font-family: "Microsoft YaHei", Arial, sans-serif;
   font-size: 24px;
-  color: #333;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #868f93;
+  text-shadow: 2px 2px 4px rgba(43, 136, 23, 0.2);
 }
+
 .menu {
+  background-color: #2e6b85;
   min-height: calc(100vh - 80px);
+}
+
+.logo .left-content {
+  display: flex;
+  align-items: center;
 }
 </style>

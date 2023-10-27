@@ -13,7 +13,7 @@
         type="text"
         v-model="messageText"
         @keydown.enter="addMessage"
-        placeholder="输入你要生成诗句的第一句!"
+        placeholder="请输入消息内容"
       />
       <button @click="addMessage">发送</button>
     </div>
@@ -44,13 +44,13 @@ export default {
       console.log(textValue);
       try {
         // 发送POST请求并携带表单数据
-        const response = await axios.post("/api/get_shici", formData);
+        const response = await axios.post("/api/get_xinghuo", formData);
 
         // 处理响应结果
         const newText = response.data["text"];
         console.log(newText);
         this.messages.push({
-          user: "对穿肠",
+          user: "AiXingHuo",
           text: newText,
           self: false,
         });
@@ -77,7 +77,7 @@ export default {
 .chat-box {
   display: flex;
   flex-direction: column;
-  height: 300px; /* set the height to your desired value */
+  height: 500px; /* set the height to your desired value */
   overflow-y: auto; /* add a scroll bar when content overflows */
 }
 
